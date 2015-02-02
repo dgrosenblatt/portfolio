@@ -1,0 +1,7 @@
+{{link-to 'Hello' 'hello'}}
+
+{{#each stock in model}}
+  <p>
+    {{link-to stock.ticker 'stocks.show' stock}} | {{stock.quantity}} shares
+  </p>
+{{/each}}
