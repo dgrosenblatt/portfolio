@@ -1,0 +1,22 @@
+<form {{action "save" on="submit"}}>
+  <h2>{{errorMessage}}</h2>
+  <div>
+    <label>Ticker:
+      {{input value=model.ticker}}
+    </label>
+  </div>
+  <div>
+    <label>Quantity:
+      {{input value=model.quantity}}
+    </label>
+  </div>
+  <input type="submit" value="save">
+  <button {{action "cancel"}}>Cancel</button>
+</form>
+
+<div>
+  <h4>Details</h4>
+  <p>
+    {{model.quantity}}  shares of {{model.ticker}}
+  </p>
+</div>
