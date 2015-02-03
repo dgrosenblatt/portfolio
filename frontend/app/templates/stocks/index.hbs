@@ -1,6 +1,8 @@
-
+<div class="stock-index-container">
 {{#each stock in model}}
-  <p>
-    {{link-to stock.ticker 'stocks.show' stock}} | {{stock.quantity}} shares
-  </p>
+  <div class="index-stock">
+    <p>{{link-to stock.ticker 'stocks.show' stock}}</p>
+    <p>{{stock.quantity}} shares</p>
+  </div>
 {{/each}}
+</div>
