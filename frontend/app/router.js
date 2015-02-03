@@ -10,8 +10,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('hello');
   this.resource('stocks', function() {
-    this.route('show', {path: ':id'});
-    this.route('edit', {path: ':id/edit'});
+    this.route('show', {path: ':stock_id'});
+    this.route('edit', {path: ':stock_id/edit'});
     this.route('new');
   });
 });
