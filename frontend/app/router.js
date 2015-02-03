@@ -11,7 +11,8 @@ Router.map(function() {
   this.route('hello');
   this.resource('stocks', function() {
     this.route('show', {path: ':id'});
-    this.route("new");
+    this.route('edit', {path: ':id/edit'});
+    this.route('new');
   });
 });
 

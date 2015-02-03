@@ -14,6 +14,12 @@ class Api::StocksController < ApplicationController
     render json: @stock
   end
 
+  def update
+    @stock = Stock.find(params[:id])
+    @stock.update_attributes(stock_params)
+    render json: @stock
+  end
+
   private
   def stock_params
     params.require(:stock).permit(:ticker, :quantity)
