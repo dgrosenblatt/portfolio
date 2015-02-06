@@ -1,8 +1,10 @@
 <div class="stock-index-container">
-{{#each stock in model}}
+
+{{#each stock in sortedByShares}}
   <div class="index-stock">
     <p>{{link-to stock.ticker 'stocks.show' stock}}</p>
     <p>{{stock.quantity}} shares</p>
+    <button {{action 'delete' stock}}>Delete</button>
   </div>
 {{/each}}
 </div>

@@ -20,6 +20,12 @@ class Api::StocksController < ApplicationController
     render json: @stock
   end
 
+  def destroy
+    @stock = Stock.find(params[:id])
+    @stock.destroy
+    head :no_content
+  end
+
   private
   def stock_params
     params.require(:stock).permit(:ticker, :quantity)
